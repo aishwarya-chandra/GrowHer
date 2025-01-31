@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E0F7FA; /* Very Light Pink */
+    color: #9C89B8; /* Soft Purple */
+    margin: 0;
+    padding: 20px; /* Added padding to the body */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  }
+  
+  .signup-container {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(113, 137, 73, 0.1);
+    width: 100%;
+    max-width: 600px; /* Wider form */
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00AAC1; /* Soft Purple */
+    margin-bottom: 1.5rem;
+  }
+  
+  fieldset {
+    border: 1px solid #80DEEA; /* Light Blue */
+    border-radius: 5px;
+    padding: 1.5rem; /* Increased padding inside fieldset */
+    margin-bottom: 1.5rem;
+  }
+  
+  legend {
+    font-weight: bold;
+    color: #00AAC1; /* Soft Purple */
+    padding: 0 0.5rem; /* Added padding to legend */
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00AAC1; /* Soft Purple */
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="password"],
+  input[type="url"],
+  select,
+  textarea,
+  input[type="file"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #80DEEA; /* Light Blue */
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #00AAC1; /* Soft Purple */
+  }
+  
+  textarea {
+    resize: vertical; /* Allow vertical resizing of textarea */
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 0.5rem;
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #00AAC1; /* Soft Purple */
+    color: #FFFFFF;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #80DEEA; /* Light Blue */
+  }

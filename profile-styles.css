@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px; /* Increased font size */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background-color: #E0F7FA;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #00ACC1;
+  color: white;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Prevents going out of bounds */
+}
+
+.nav-bar:hover {
+  overflow: auto;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 28px; /* Increased size */
+  color: white;
+  padding-bottom: 20px;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-bar ul li {
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.nav-bar ul li a {
+  font-size: 20px; /* Increased size */
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  background-color: #80DEEA;
+  border-left: 3px solid #80DEEA;
+}
+
+/* Main Content */
+.main-content {
+  margin-left: 250px;
+  flex-grow: 1;
+  background-color: #E0F7FA; /* Light cyan */
+}
+
+/* Header Section */
+header {
+  position: relative;
+  height: 200px;
+  background: url('https://via.placeholder.com/1200x400') no-repeat center center/cover;
+}
+
+.header-background {
+  height: 100%;
+  background-color: rgba(0, 172, 193, 0.5); /* Teal overlay */
+}
+
+.profile-picture {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #FFFFFF;
+}
+
+.profile-picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Profile Details Section */
+.profile-details {
+  text-align: center;
+  margin-top: 70px;
+}
+
+.profile-details h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #00ACC1; /* Teal */
+}
+
+.profile-details p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+#connections-button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background-color: #00ACC1; /* Teal */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#connections-button:hover {
+  background-color: #80DEEA; /* Light teal hover */
+}
+
+/* Form Details Section */
+.form-details {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 600px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-details h2 {
+  color: #00ACC1; /* Teal */
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.details-grid div {
+  padding: 0.5rem;
+  border-bottom: 1px solid #E0F7FA; /* Light cyan */
+}
+
+/* Profit Trends Section */
+.profit-trends-section {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profit-trends-section h2 {
+  color: #00ACC1; /* Teal */
+}
+
+#profit-trends-chart {
+  width: 100% !important;
+  height: 400px !important;
+}
+
+/* Posted Pictures Section */
+.posted-pictures-section {
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.posted-pictures-section h2 {
+  color: #00ACC1; /* Teal */
+}
+
+.picture-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.picture-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Connections Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #FFFFFF;
+  margin: 10% auto;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#search-connections {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #80CBC4; /* Soft green */
+  border-radius: 5px;
+}
+
+#connections-list {
+  list-style: none;
+  padding: 0;
+}
+
+#connections-list li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #E0F7FA; /* Light cyan */
+  transition: background-color 0.3s ease;
+}
+
+#connections-list li:hover {
+  background-color: #80DEEA; /* Light teal hover */
+}

@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px; /* Increased font size */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: #E0F7FA; /* Light pinkish background */
+}
+
+/* Navigation Bar */
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #00ACC1; /* Purple shade */
+    color: white;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents going out of bounds */
+}
+
+.nav-bar:hover {
+    overflow: auto;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 28px; /* Increased size */
+    color: white;
+    padding-bottom: 20px;
+}
+
+.nav-bar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-bar ul li {
+    padding: 15px;
+    text-align: left;
+    width: 100%;
+}
+
+.nav-bar ul li a {
+    font-size: 20px; /* Increased size */
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+    background-color: #80DEEA; /* Pinkish hover */
+    border-left: 3px solid #80DEEA; /* Pink border */
+}
+
+/* Feed Section */
+.feed-section {
+    margin-left: 250px;
+    padding: 30px; /* Increased padding */
+    flex-grow: 1;
+    background-color: #E0F7FA; /* Light cyan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Feed Tabs (Connected & Explore Buttons) */
+.feed-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    background-color: #E0F7FA; /* Light cyan background for contrast */
+    z-index: 10; /* Ensure it stays on top of other content when scrolling */
+    padding: 15px 0; /* Increased padding */
+    border-bottom: 1px solid #80CBC4; /* Soft green border */
+}
+
+/* Feed Tabs Button */
+.feed-tabs button {
+    background-color: #00ACC1; /* Teal */
+    color: white;
+    padding: 12px 24px; /* Increased padding */
+    border: none;
+    cursor: pointer;
+    width: 45%;
+    font-size: 18px; /* Increased font size */
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* Hover effect for feed tabs */
+.feed-tabs button:hover {
+    background-color: #80DEEA; /* Light teal */
+    border: 2px solid #80DEEA; /* Light teal border */
+}
+
+/* Post Section */
+.post {
+    background-color: white; /* White background for posts */
+    padding: 25px; /* Increased padding */
+    margin-bottom: 25px; /* Increased margin */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, border 0.3s ease;
+    width: 80%; /* Increased width for posts */
+    max-width: 800px; /* Maximum width for posts */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Hover effect for posts */
+.post:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #80DEEA; /* Light teal border on hover */
+}
+
+/* Create Post Box */
+.post-create {
+    margin-top: 25px; /* Increased margin */
+    margin-bottom: 25px; /* Increased margin */
+    width: 80%; /* Increased width for post creation box */
+    max-width: 800px; /* Maximum width for post creation box */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#post-content {
+    width: 100%;
+    height: 120px; /* Increased height */
+    margin-bottom: 15px; /* Increased margin */
+    padding: 15px; /* Increased padding */
+    border: 1px solid #80CBC4; /* Soft green border */
+    border-radius: 5px;
+    font-size: 16px; /* Increased font size */
+}
+
+/* Button Styling */
+button {
+    padding: 12px 24px; /* Increased padding */
+    background-color: #00ACC1; /* Teal */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Increased font size */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background-color: #80DEEA; /* Light teal on hover */
+}
+
+/* Feed Styling */
+.feed {
+    margin-top: 25px; /* Increased margin */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased gap */
+}
+
+/* Display posts under the Create Post Box */
+#connected-feed, #explore-feed {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased gap */
+}
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    gap: 15px; /* Increased gap */
+    margin-top: 15px; /* Increased margin */
+}
+
+/* Image Styling */
+.post img.post-image {
+    width: 100%;
+    height: 300px; /* Fixed height for Instagram-like proportions */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border-radius: 8px;
+    margin-top: 15px; /* Increased margin */
+}
+
+/* Avatar Styling */
+.post img.avatar {
+    width: 50px; /* Increased size */
+    height: 50px; /* Increased size */
+    border-radius: 50%;
+    margin-right: 15px; /* Increased margin */
+}
+
+/* Post Header */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Increased margin */
+}
+
+.post-header h4 {
+    margin: 0;
+    font-size: 18px; /* Increased font size */
+}

@@ -1,0 +1,271 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  background-color: #E0F7FA; /* Light background */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #00ACC1; /* Teal */
+  color: white;
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.nav-bar:hover {
+  overflow: auto;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 28px;
+  color: white;
+  padding-bottom: 20px;
+}
+
+.nav-bar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-bar ul li {
+  padding: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.nav-bar ul li a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 12px;
+  transition: background-color 0.3s ease, border-left 0.3s ease;
+}
+
+.nav-bar ul li a:hover {
+  background-color: #80DEEA;
+  border-left: 3px solid #80DEEA;
+}
+
+/* Centered Chat Container */
+.chat-container {
+  display: flex;
+  flex-direction: row; /* Align sidebar and chat window */
+  width: 50%;
+  height: 80vh;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Center the chat box */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Sidebar (Profiles List) */
+.sidebar {
+  width: 30%;
+  background-color: #00ACC1;
+  color: white;
+  padding: 20px;
+  border-radius: 10px 0 0 10px;
+}
+
+.sidebar h2 {
+  margin-top: 0;
+}
+
+.profile-list {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-list li {
+  padding: 10px;
+  margin: 5px 0;
+  background-color: #80CBC4;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.profile-list li:hover {
+  background-color: #E0F7FA;
+}
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Chat Window */
+.chat-window {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+/* Chat Header */
+.chat-header {
+  padding: 15px 20px;
+  background-color: #00ACC1;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.chat-header h2 {
+  margin: 0;
+  color: white;
+}
+
+/* Chat Messages */
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #E0F7FA;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  border-top: 1px solid #ddd;
+  align-items: center;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #80CBC4;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background-color: #00ACC1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #80DEEA;
+}
+
+/* Potential Connections Section */
+.potential-connections-container {
+  width: 250px;
+  background-color: #00ACC1;
+  padding: 20px;
+  box-sizing: border-box;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.potential-connections h2 {
+  color: #ffffff;
+}
+
+.connections-list {
+  max-height: 400px;
+  overflow-y: auto;
+  list-style-type: none;
+  padding: 0;
+}
+
+.connections-list li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.connections-list li:hover {
+  background-color: #E0F7FA;
+}
+
+.connection-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+
+.connection-item img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.connection-item .name {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.connection-item button {
+  background-color: #00ACC1;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.connection-item button:hover {
+  background-color: #80DEEA;
+}
+
+/* Messages */
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.message.sent {
+  background-color: #80DEEA;
+  align-self: flex-end;
+}
+
+.message.received {
+  background-color: #80CBC4;
+  align-self: flex-start;
+}
