@@ -1,84 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profile Page</title>
-  <link rel="stylesheet" href="profile-styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowHer - My Profile</title>
+    <link rel="stylesheet" href="profile-styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <div class="nav-bar">
-    <div class="logo">
-      <h2>GrowHer</h2>
+    <div class="nav-bar">
+        <div class="logo">
+            <h2>GrowHer</h2>
+        </div>
+        <ul>
+          <li><a href="mainfeed.html">Feed</a></li>
+          <li><a href="connection.html">Connections</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="forum.html">Forum</a></li>
+          <li><a href="#" id="logout-btn">Logout</a></li>
+        </ul>
     </div>
-    <ul>
-      <li><a href="mainfeed.html">Feed</a></li>
-      <li><a href="connection.html">Connections</a></li>
-      <li><a href="news.html" id="news-nav">News</a></li>
-      <li><a href="profile.html">Profile</a></li>
-      <li><a href="forum.html">Forum</a></li>
-    </ul>
-  </div>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <!-- Header Section -->
-    <header>
-      <div class="header-background"></div>
-      <div class="profile-picture">
-        <img src="E:\GrowHerFinal\p.jpg" alt="Profile Picture">
-      </div>
-    </header>
+    <div class="main-content">
+        <header>
+            <div class="header-background"></div>
+            <div class="profile-picture">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" id="profile-image">
+            </div>
+        </header>
 
-    <!-- Profile Details Section -->
-    <section class="profile-details">
-      <h1 id="profile-name">Yashoda Sharma</h1>
-      <p id="profile-type">Business</p>
-      <p id="profile-bio">I am a tution teacher, passionate about teaching students new ways to learn and understand.</p>
-      <button id="connections-button">Connections (50)</button>
-    </section>
+        <div class="profile-details">
+            <h1 id="user-name">Loading...</h1>
+            <p id="username" class="username">@Loading...</p>
+            <p id="user-role" class="role-badge">Loading...</p>
+            <p id="user-bio">Loading...</p>
+            <button id="connections-button">View Connections</button>
+        </div>
 
-    <!-- Form Details Section -->
-    <section class="form-details">
-      <h2>Details</h2>
-      <div class="details-grid">
-        <div><strong>Email:</strong> <span id="profile-email">tutionclasses@gmail.com</span></div>
-        <div><strong>Phone:</strong> <span id="profile-phone">+1234567890</span></div>
-        <div><strong>Industry:</strong> <span id="profile-industry">Education</span></div>
-        <div><strong>Business Type:</strong> <span id="profile-business-type">Teacher</span></div>
-        <div><strong>Funding Goal:</strong> <span id="profile-funding-goal">₹5L+</span></div>
-      </div>
-    </section>
+        <div class="form-details">
+            <h2>Details</h2>
+            <div class="details-grid" id="details-container">
+                <!-- Details will be populated dynamically based on user type -->
+                <div class="loading-indicator">Loading user details...</div>
+            </div>
+        </div>
 
-    <!-- Profit Trends Graph -->
-    <section class="profit-trends-section">
-      <h2>Profit Trends</h2>
-      <canvas id="profit-trends-chart"></canvas>
-    </section>
+        <!-- Business-specific sections (will be hidden for investors) -->
+        <div class="business-specific-content">
+            <div class="profit-trends-section">
+                <h2>Profit Trends</h2>
+                <canvas id="profit-trends-chart"></canvas>
+            </div>
 
-    <!-- Posted Pictures Section -->
-    <section class="posted-pictures-section">
-      <h2>Posted Pictures</h2>
-      <div class="picture-grid" id="picture-grid">
-        <!-- Pictures will be dynamically added here -->
-      </div>
-    </section>
+            <div class="posted-pictures-section">
+                <h2>Business Gallery</h2>
+                <div class="picture-grid" id="picture-grid">
+                    <!-- Pictures will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Investor-specific sections (will be hidden for businesses) -->
+        <div class="investor-specific-content">
+            <div class="investment-portfolio-section">
+                <h2>Investment Portfolio</h2>
+                <div id="investment-portfolio">
+                    <!-- Investment details will be populated dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Connections Modal -->
     <div id="connections-modal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Connections</h2>
-        <input type="text" id="search-connections" placeholder="Search connections...">
-        <ul id="connections-list">
-          <!-- Connections will be dynamically added here -->
-        </ul>
-      </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>My Connections</h2>
+            <input type="text" id="search-connections" placeholder="Search connections...">
+            <ul id="connections-list">
+                <!-- Connections will be populated dynamically -->
+            </ul>
+        </div>
     </div>
-  </div>
 
-  <script src="profile-script.js"></script>
+    <script src="profile-script.js"></script>
 </body>
 </html>

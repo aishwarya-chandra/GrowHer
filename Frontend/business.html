@@ -1,131 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business Account Setup</title>
-  <link rel="stylesheet" href="bsstyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowHer - Business Signup</title>
+    <link rel="stylesheet" href="bsstyles.css">
 </head>
 <body>
-  <div class="signup-container">
-    <h1>Business Account Setup</h1>
-    <form id="business-form">
-      <!-- Basic Information -->
-      <fieldset>
-        <legend>Basic Information</legend>
-        <div class="form-group">
-          <label for="business-name">Business Name</label>
-          <input type="text" id="business-name" name="business-name" required>
-        </div>
-        <div class="form-group">
-          <label for="owner-name">Owner’s Full Name</label>
-          <input type="text" id="owner-name" name="owner-name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" name="confirm-password" required>
-        </div>
-      </fieldset>
+    <div class="signup-container">
+        <h1>Business Account Setup</h1>
+        <form id="business-form" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Basic Information</legend>
+                <div class="form-group">
+                    <label for="business-name">Business Name</label>
+                    <input type="text" id="business-name" name="businessName" required>
+                </div>
+                <div class="form-group">
+                    <label for="owner-name">Owner's Full Name</label>
+                    <input type="text" id="owner-name" name="ownerName" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirmPassword" required minlength="6">
+                </div>
+            </fieldset>
 
-      <!-- Business Details -->
-      <fieldset>
-        <legend>Business Details</legend>
-        <div class="form-group">
-          <label for="industry">Business Industry</label>
-          <select id="industry" name="industry" required>
-            <option value="">Select</option>
-            <option value="tech">Tech</option>
-            <option value="fashion">Fashion</option>
-            <option value="healthcare">Healthcare</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="business-type">Business Type</label>
-          <select id="business-type" name="business-type" required>
-            <option value="">Select</option>
-            <option value="startup">Startup</option>
-            <option value="small-business">Small Business</option>
-            <option value="established-business">Established Business</option>
-            <option value="ngo">NGO</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="description">Business Description (Short Pitch)</label>
-          <textarea id="description" name="description" rows="4" required></textarea>
-        </div>
-        <div class="form-group">
-          <label for="website">Website/Social Media Links (Optional)</label>
-          <input type="url" id="website" name="website">
-        </div>
-      </fieldset>
+            <fieldset>
+                <legend>Business Details</legend>
+                <div class="form-group">
+                    <label for="industry">Business Industry</label>
+                    <select id="industry" name="industry" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Tech">Tech</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Healthcare">Healthcare</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="business-type">Business Type</label>
+                    <select id="business-type" name="businessType" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Startup">Startup</option>
+                        <option value="Small Business">Small Business</option>
+                        <option value="Established Business">Established Business</option>
+                        <option value="NGO">NGO</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="description">Business Description (Short Pitch)</label>
+                    <textarea id="description" name="description" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="website">Website/Social Media Links (Optional)</label>
+                    <input type="url" id="website" name="website" placeholder="https://yourbusiness.com">
+                </div>
+            </fieldset>
 
-      <!-- Investment Requirements -->
-      <fieldset>
-        <legend>Investment Requirements</legend>
-        <div class="form-group">
-          <label for="funding-goal">Funding Goal</label>
-          <select id="funding-goal" name="funding-goal" required>
-            <option value="">Select</option>
-            <option value="50k">₹50k</option>
-            <option value="1L">₹1L</option>
-            <option value="5L+">₹5L+</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="investment-type">Investment Type</label>
-          <select id="investment-type" name="investment-type" required>
-            <option value="">Select</option>
-            <option value="equity">Equity</option>
-            <option value="loans">Loans</option>
-            <option value="crowdfunding">Crowdfunding</option>
-            <option value="grants">Grants</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="business-stage">Business Stage</label>
-          <select id="business-stage" name="business-stage" required>
-            <option value="">Select</option>
-            <option value="idea">Idea</option>
-            <option value="prototype">Prototype</option>
-            <option value="early-revenue">Early Revenue</option>
-            <option value="scaling">Scaling</option>
-          </select>
-        </div>
-      </fieldset>
+            <fieldset>
+                <legend>Investment Requirements</legend>
+                <div class="form-group">
+                    <label for="funding-goal">Funding Goal</label>
+                    <select id="funding-goal" name="fundingGoal" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="₹50k">₹50k</option>
+                        <option value="₹1L">₹1L</option>
+                        <option value="₹5L+">₹5L+</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="investment-type">Investment Type</label>
+                    <select id="investment-type" name="investmentType" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Equity">Equity</option>
+                        <option value="Loans">Loans</option>
+                        <option value="Crowdfunding">Crowdfunding</option>
+                        <option value="Grants">Grants</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="business-stage">Business Stage</label>
+                    <select id="business-stage" name="businessStage" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="Idea">Idea</option>
+                        <option value="Prototype">Prototype</option>
+                        <option value="Early Revenue">Early Revenue</option>
+                        <option value="Scaling">Scaling</option>
+                    </select>
+                </div>
+            </fieldset>
 
-      <!-- Verification & Security -->
-      <fieldset>
-        <legend>Verification & Security</legend>
-        <div class="form-group">
-          <label for="registration-certificate">Upload Business Registration Certificate</label>
-          <input type="file" id="registration-certificate" name="registration-certificate" accept=".pdf,.jpg,.png" required>
-        </div>
-        <div class="form-group">
-          <label for="government-id">Upload Government ID (Owner’s PAN, Aadhaar, Passport)</label>
-          <input type="file" id="government-id" name="government-id" accept=".pdf,.jpg,.png" required>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" id="terms" name="terms" required>
-          <label for="terms">I agree to the Terms & Conditions</label>
-        </div>
-      </fieldset>
+            <fieldset>
+                <legend>Verification & Security</legend>
+                <div class="form-group">
+                    <label for="registration-certificate">Upload Business Registration Certificate</label>
+                    <input type="file" id="registration-certificate" name="registrationCertificate" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <small>Accepted formats: PDF, JPG, PNG (Max 5MB)</small>
+                </div>
+                <div class="form-group">
+                    <label for="government-id">Upload Government ID (Owner's PAN, Aadhaar, Passport)</label>
+                    <input type="file" id="government-id" name="governmentId" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <small>Accepted formats: PDF, JPG, PNG (Max 5MB)</small>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the Terms & Conditions</label>
+                </div>
+            </fieldset>
 
-      <button type="submit" onclick="login()">Submit</button>
-    </form>
-  </div>
-  <script src="bsscript.js"></script>
+            <button type="submit">Submit</button>
+            <p class="login-link">Already have an account? <a href="#" onclick="login(); return false;">Login</a></p>
+        </form>
+    </div>
+    <script src="bsscript.js"></script>
 </body>
 </html>

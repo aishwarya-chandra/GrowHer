@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>growHer - Login</title>
-  <link rel="stylesheet" href="login_style.css"> <!-- Link to external CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrowHer - Login</title>
+    <link rel="stylesheet" href="login_style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome Back!</h1>
-    <p class="subtitle">Login to continue your journey with growHer</p>
+    <div class="container">
+        <h1>Welcome Back!</h1>
+        <p class="subtitle">Login to continue your journey with growHer</p>
+        
+        <form id="login-form">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+            <div class="remember-me">
+                <input type="checkbox" id="remember-me" name="remember-me">
+                <label for="remember-me">Keep me logged in</label>
+            </div>
+            
+            <button type="submit" class="btn-login">Login</button>
+        </form>
+        
+        <p class="signup-link">Don't have an account? <a href="signin.html">Sign Up</a></p>
+    </div>
     
-    <form id="login-form">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" placeholder="Enter your username" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-      </div>
-      <div class="form-group remember-me">
-        <input type="checkbox" id="remember-me" name="remember-me">
-        <label for="remember-me">Keep me logged in</label>
-      </div>
-      <button type="submit" class="btn btn-login" onclick="login()">Login</button>
-    </form>
-
-    <p class="signup-link">Don't have an account? <a href="signin.html">Sign Up</a></p>
-  </div>
-
-  <script src="login_script.js"></script> <!-- Link to external JavaScript -->
+    <script src="login_script.js"></script>
 </body>
 </html>

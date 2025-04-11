@@ -39,6 +39,7 @@ body {
 .nav-bar ul {
     list-style: none;
     padding: 0;
+    width: 100%;
 }
 
 .nav-bar ul li {
